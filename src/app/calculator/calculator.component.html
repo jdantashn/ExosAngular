@@ -1,0 +1,31 @@
+<br>
+<br>
+<br>
+<div>
+    <input id="name" [(ngModel)]="calculator.num1" placeholder="name">
+    <select [(ngModel)]="calculator.operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input id="name" [(ngModel)]="calculator.num2" placeholder="name">
+    <button (click)="calculate()">Calculate</button>
+    = {{calculator.result}}
+
+    <br>
+    <br>
+    <br>
+
+    <ul>
+        <li *ngFor="let operationHistoryRecord of operationHistoryData; let i = index">
+            DateTime: {{operationHistoryRecord.dateTime}} 
+            <button type="button" (click)="onDeleteOperationHistory(i)">Delete</button>
+            <br>
+            Requested Operation: {{operationHistoryRecord.requestedOperation}}
+            <br>
+            Result: {{operationHistoryRecord.operationResult}}
+        </li>
+    </ul>
+
+</div>

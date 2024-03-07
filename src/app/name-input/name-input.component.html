@@ -1,0 +1,34 @@
+<div [style.font-family]="person.fontFamily" [style.font-size.px]="person.fontSize"
+  [style.text-align]="person.alignment">
+  <span>Hello {{person.name |
+    uppercase}}</span>
+</div>
+
+<div>
+  <div>
+    <input id="name" [(ngModel)]="person.name" placeholder="name">
+  </div>
+  <div>
+    <select [(ngModel)]="person.fontFamily">
+      <option value="serif">Serif</option>
+      <option value="cursive">Cursive</option>
+      <option value="monospace">Monospace</option>
+    </select>
+  </div>
+  <div>
+    <input id="fontSize" [(ngModel)]="person.fontSize" placeholder="Font Size">
+  </div>
+  <div>
+    <input type="checkbox" [(ngModel)]="person.alignmentLeft" (ngModelChange)="updateAlignment('left')">
+    <label for="alignLeft">Left</label>
+    <input type="checkbox" [(ngModel)]="person.alignmentCenter" (ngModelChange)="updateAlignment('center')">
+    <label for="alignLeft">Center</label>
+    <input type="checkbox" [(ngModel)]="person.alignmentRight" (ngModelChange)="updateAlignment('right')">
+    <label for="alignLeft">Right</label>
+  </div>
+
+
+
+
+
+</div>
