@@ -1,0 +1,21 @@
+<p>Transactions</p>
+<table class="table">
+	<tr>
+		<th><a (click)="onSort('id')">id</a></th>
+		<th><a (click)="onSort('label')">Label</a></th>
+		<th><a (click)="onSort('amount')">Amount</a></th>
+		<th><a (click)="onSort('balance')">Balance</a></th>
+		<th><a (click)="onSort('date')">Date</a></th>
+	</tr>
+	<tr *ngFor="let transaction of dataList" >
+		<td>{{transaction.id}}</td>
+		<td>{{transaction.label}}</td>
+		<td>{{transaction.amount}}</td>
+		<td>{{transaction.balance}}</td>
+		<td>{{transaction.date}}</td>
+	</tr>
+</table>
+
+
+
+
